@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { counterSlicer } from './slicer/counter';
-
+import counterReducer from './slicer/counter/index';
 // reducers: has responsibilty to handle events
+
 export const store = configureStore({
   reducer: {
-    counter: counterSlicer,
+    counter: counterReducer,
   },
 });
