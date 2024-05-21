@@ -1,6 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { decrement, increment } from '../../redux/slicer/counter';
+import {
+  decrement,
+  increment,
+  incrementByAmount,
+} from '../../redux/slicer/counter';
 
 function Counter() {
   const count = useSelector((state) => state.counter.value);
@@ -10,6 +14,9 @@ function Counter() {
       <button onClick={() => dispatch(increment())}>Increment</button>
       <span>{count}</span>
       <button onClick={() => dispatch(decrement())}>Decrement</button>
+      <button onClick={() => dispatch(incrementByAmount(15))}>
+        Increment By
+      </button>
     </>
   );
 }
