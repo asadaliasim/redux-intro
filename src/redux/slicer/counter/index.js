@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-
+// initial state
 const initialState = {
   value: 0,
 };
 
+// reducer contain functions
 export const counterSlicer = createSlice({
   name: 'counter',
   initialState,
