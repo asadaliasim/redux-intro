@@ -7,6 +7,7 @@ import {
 } from '../../redux/slicer/counter';
 
 function Counter() {
+  // from redux
   const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
   return (
